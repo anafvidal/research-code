@@ -10,23 +10,17 @@ resultList=dir(fullfile([ direc '/*_results.mat']));
             for iv=1:length(resultList)
                 res=load([ direc '/' resultList{iv} ]);
                 mseList(iv)=res.mse;
-                mseThLastList(iv)=res.mse_thetalast;
-                if isfield(res, 'execTimeFindTheta')
-                   
+                if isfield(res, 'execTimeFindTheta')                   
                    timeList(iv)=res.execTimeFindTheta;
                 end   
             end
             if exist('mseList','var')
-                mseAvg=mean(mseList);
-                mseAvgThetaLast=mean(mseThLastList);
-                standardDev=std(mseList);     
-                standardDevThetaLast=std(mseThLastList);              
+                mseAvg=mean(mseList);                
+                standardDev=std(mseList);                 
                 
                 %save mse
                 mseName=[direc '/mseAvg_' char(num2str(mseAvg)) '.mat'];
-                save(char(mseName), 'mseAvg');
-                 mseNameThLast=[direc '/mseAvgThLast_' char(num2str(mseAvgThetaLast)) '.mat'];
-                save(char(mseNameThLast), 'mseAvgThetaLast');
+                save(char(mseName), 'mseAvg');                
                  mseName=[direc '/mseAvg.mat'];
                 save(char(mseName), 'mseAvg');
                 %save std
@@ -43,9 +37,8 @@ resultList=dir(fullfile([ direc '/*_results.mat']));
                     timeName=[direc '/timeAvg.mat'];
                     save(char(timeName), 'timeAvg');
                 end
-                fprintf('mse with avg theta_i=%d\n',mseAvg)
-                fprintf('mse with last theta_i=%d\n',mseAvgThetaLast)
-                fprintf('std with avg theta_i=%d\n',standardDev)
+                fprintf('mse=%d\n',mseAvg)                
+                fprintf('std=%d\n',standardDev)
                 fprintf('avg time in min=%d\n',timeAvg/60)
             end
        
