@@ -12,7 +12,7 @@ Each script contains a detailed explanation of what it does and which dependenci
 The results are stored in a "results" directory. 
 The "images" directory contains all the test images. 
 After all the test images are processed and the results are stored in the corresponding directory, 
-the script "utils/runStats.m" can be used to compute the average MSE and computing time. 
+the function "utils/runStats.m" can be used to compute the average MSE and computing time. 
 runStats.m is a function that receives as an argument the full path to the folder where all the results (the *.mat files) are stored. 
 
 
