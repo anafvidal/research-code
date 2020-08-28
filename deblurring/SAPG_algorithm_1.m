@@ -7,7 +7,8 @@
 %
 %  [1] A. F. Vidal, V. De Bortoli, M. Pereyra, and D. Alain, Maximum 
 %  likelihood estimation of regularisation parameters in high-dimensional
-%  inverse problems: an empirical bayesian approach. Part I
+%  inverse problems: an empirical bayesian approach. Part I:Methodology and 
+%  Experiments.
 %  
 %  =================================================================== 
 %  Authors: Ana F. Vidal, Marcelo Pereyra
