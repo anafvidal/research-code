@@ -127,7 +127,7 @@ for bsnr= [8  ]
         op.lambdaU= op.lambdaX; %smoothing parameter for MYULA sampler: prior dist
         op.gammaU =0.9* op.lambdaU; %discretisation step MYULA: prior dist
       
-        %% Run SAPG Algorithm 1 to compute theta_EB
+        %% Run SAPG Algorithm 3 to compute theta_EB
         [theta1_EB,theta2_EB,results]=SAPG_algorithm_3_denois_tgv(y_crop, op);       
         
         %% Solve MAP problem with theta1_EB and theta2_EB          
