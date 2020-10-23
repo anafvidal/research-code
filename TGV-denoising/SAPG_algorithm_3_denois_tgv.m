@@ -118,13 +118,13 @@ max_eta2=log(op.max_th2);
 % If initialisation is really bad e.g. th=40, we need different scales,
 % for instance delta1 should be 1000 times larger than the current value.
 
-delta1 = @(i) op.d1_scale*( (i^(-op.d_exp)) / (dimX) ); %delta(i) for proximal gradient algorithm t^(3/4)?
-delta2 = @(i) op.d2_scale*( (i^(-op.d_exp)) / (dimX) ); %delta(i) for proximal gradient algorithm t^(3/4)?
+delta1 = @(i) op.d1_scale*( (i^(-op.d_exp)) / (dimX) ); %delta(i) for proximal gradient algorithm
+delta2 = @(i) op.d2_scale*( (i^(-op.d_exp)) / (dimX) ); %delta(i) for proximal gradient algorithm
 
 
 %% Functions related to Bayesian model
 %%%% Likelihood (data fidelity)
-f = @(x) -(norm(x-y,'fro')^2)/(2*sigma^2);% p(y|x)∝ exp{-op.f(x)}
+f = @(x) (norm(x-y,'fro')^2)/(2*sigma^2);% p(y|x)∝ exp{-f(x)}
 gradF = @(x) (x-y)/sigma^2; % Gradient of smooth part f
 
 %%%% Regulariser
@@ -134,7 +134,7 @@ tgvProxIter=100;
 getProx_g1_g2= @(x,th1,th2,lambda) TGVprox(x,th1,th2,lambda,tgvProxIter);%TGV norm prox
 
 % We use this scalar summary to monitor convergence
-logPiX = @(x,th1,th2,g1,g2) f(x) -th1*g1-th2*g2;
+logPiX = @(x,th1,th2,g1,g2) -f(x) -th1*g1-th2*g2;
 logPiU = @(u,th1,th2,g1,g2) -th1*g1-th2*g2;
 
 epsil=1e-10; %small constant to add a cuadratic penalty for when we sample 
