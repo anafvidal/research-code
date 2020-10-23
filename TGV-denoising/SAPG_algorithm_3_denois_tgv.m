@@ -101,11 +101,9 @@ end
 dimX=numel(op.X0);
 sigma=op.sigma;
 %%%% MYULA sampler
-if not(isfield(op, 'warmup'))
-    op.warmup=100;       %use 100 by default 
+if not(isfield(op, 'warmupSteps'))
+    op.warmupSteps=100;       %use 100 by default 
 end
-warmupSteps=op.warmup;   
- 
 
 %%%% SAPG algorithm 3
 total_iter=op.samples;
@@ -143,7 +141,7 @@ epsil=1e-10; %small constant to add a cuadratic penalty for when we sample
 %% MYULA Warm-up
  X_wu = op.X0;  %posterior chain initialization
  U_wu =op.U0;   %prior chain initialization
-if (warmupSteps>0)
+if (op.warmupSteps>0)
     fix_th1=op.th1_init;
     fix_th2=op.th2_init;
     logPiTrace_WU_X(op.warmupSteps)=0;%logPiTrace for warm up iterations posterior chain
