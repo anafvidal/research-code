@@ -1,4 +1,4 @@
-This code generates the results presented in [1] available at https://arxiv.org/pdf/1911.11709.pdf
+This code generates the results presented in [1] available at https://epubs.siam.org/doi/pdf/10.1137/20M1339829 or https://arxiv.org/pdf/1911.11709.pdf for the arxiv version.
 
 To replicate the deblurring experiments in [1] you can run the following scripts:
 
@@ -22,6 +22,4 @@ be used to compute the average MSE and computing time.
 runStats.m is a function that receives as an argument the full path to the folder where all the results (the *.mat files) are stored. 
 
 
-[1] A. F. Vidal, V. De Bortoli, M. Pereyra, and D. Alain, Maximum
-likelihood estimation of regularisation parameters in high-dimensional
-inverse problems: an empirical bayesian approach. Part I: Methodology and Experiments
+[1] A. F. Vidal, V. De Bortoli, M. Pereyra, and A. Durmus (2020). Maximum Likelihood Estimation of Regularization Parameters in High-Dimensional Inverse Problems: An Empirical Bayesian Approach Part I: Methodology and Experiments. SIAM Journal on Imaging Sciences, 13(4), 1945-1989.
