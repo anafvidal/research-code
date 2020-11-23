@@ -23,4 +23,7 @@ be used to compute the average MSE and computing time.
 runStats.m is a function that receives as an argument the full path to the folder where all the results (the *.mat files) are stored. 
 
 
-[1] A. F. Vidal, V. De Bortoli, M. Pereyra, and A. Durmus (2020). Maximum Likelihood Estimation of Regularization Parameters in High-Dimensional Inverse Problems: An Empirical Bayesian Approach Part I: Methodology and Experiments. SIAM Journal on Imaging Sciences, 13(4), 1945-1989.
+[1] A. F. Vidal, V. De Bortoli, M. Pereyra, and A. Durmus (2020). 
+Maximum Likelihood Estimation of Regularization Parameters in High-Dimensional Inverse Problems: 
+An Empirical Bayesian Approach Part I: Methodology and Experiments. 
+SIAM Journal on Imaging Sciences, 13(4), 1945-1989.
