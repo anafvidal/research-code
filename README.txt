@@ -1,4 +1,5 @@
-This code generates the results presented in [1] available at https://epubs.siam.org/doi/pdf/10.1137/20M1339829 or https://arxiv.org/pdf/1911.11709.pdf for the arxiv version.
+This code generates the results presented in [1] available at https://epubs.siam.org/doi/pdf/10.1137/20M1339829 
+or https://arxiv.org/pdf/1911.11709.pdf for the arxiv version.
 
 To replicate the deblurring experiments in [1] you can run the following scripts:
 
